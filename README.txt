@@ -1,5 +1,5 @@
 CSE 360 Fall 2014 Image Uploader Project README“Look at this Shit!”
-Demo video link:(add later)
+Demo video link: http://youtu.be/0XM8-KHul78
 Group Members: Charles Lima, Ted Work, Shelby StuartMost of the functionality of the project should be there, the only thing that I was having trouble with was the editing of photos (brightness). ——————————————————————————————————————————————————————————————Set up of the project I set the project up in a mac, so these are my instructions1. Create a virtual environment and activate it.
 
 2. place source and static folders in virtual environment. 
@@ -11,8 +11,9 @@ this will read every line of the file and install whatever is written.
 
 5. run ‘python manage.py runserver’ to turn on the server.
 
-6. to run the functionality tests, you must enter the signups folder and runeach test individually.
+6. to run the functionality tests, you must enter the signups folder and run each test individually.
 list of commands to run for all functionality tests
+
 python login_test.py
 python register_test.py
 python logout_test.py
