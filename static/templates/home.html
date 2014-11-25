@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block jumbotron %}
+ 
+ <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Look at this shit!</h1>
+        <p>The place where you can look at all the shit that other people
+        have taken pictures of</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Press me! &raquo;</a></p>
+      </div>
+    </div>
+    
+{% endblock %}
+
+
+{% block content %}
+    <div class="col-sm-4">
+      <h2>Signup today!</h2>
+      <p>Create an account today and look at other peoples shit!</p>
+      <p><a class="btn btn-success" href='{% url "register" %}' role="button">Set Up Account &raquo;</a></p>
+    </div>
+   
+   <div class="col-sm-4">
+      <h2>About The Developers</h2>
+      <p>"Why is this app even a thing?" you might ask? Find the answer to your question throught the link!</p>
+      <p><a class="btn btn-warning" href='{% url "aboutus" %}' role="button">About Developers &raquo;</a></p>
+    </div>
+    
+   <div class="col-sm-4">
+      <h2>Login here!</h2>
+      <p>Already have an account? sign in here to look at shit!</p>
+      <p><a class="btn btn-danger" href="login" role="button">Login &raquo;</a></p>
+    </div>
+    
+    <!--This is where the sign up section starts-->
+
+    <!--<div class="col-sm-4" style="text-align: center">
+        <h1>join now</h1>
+        <form method='POST' action=''> {% csrf_token %}
+            {{ form.as_p }}
+            
+            <input type='submit' class='btn-success btn-block'>
+        </form>
+      
+    </div>-->
+
+{% endblock %}
+   

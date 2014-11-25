@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Settings Page!</h1>
+    <div>This is the settings page, where you can upload a new profile picture!</div>
+    <h2>{{ loginUser.full_name }}</h2>
+    <body>
+    <!-- List of uploaded documents -->
+    {% if  settings %}
+                    <img src="{{ STATIC_URL }}profile_pic/{{ settings.profile_pic }}" class="img-circle" width="200" height="200">
+                    {% else %}
+                    <img src="{{ STATIC_URL }}css/profile_pic.png" class="img-circle" width="200" height="200">
+    {% endif %}
+                
+    <!-- Upload form. Note enctype attribute! -->
+    <form action="{% url "settings" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <p><input type="submit" value="Upload" /></p>
+    </form>
+    </body>
+</div>
+{% endblock %}

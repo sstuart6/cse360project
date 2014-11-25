@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='col-sm-12' style='text-align: center'>
+    
+    <h1>Welcome to Dis Shit, {{loginUser.email}}!</h1>
+       
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>   
+    </head>
+    <body>
+    
+    <!-- List of uploaded documents -->
+    {% if photos %}
+        <ul>
+        {% for picture in photos %}
+        <!--<li><a href="{{ picture.photo.url }}">{{ picture.photo.name }}</a></li>-->
+            <img width="200" height="200" src='/static/media/{{picture.photo}}' >
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No pictures.</p>
+    {% endif %}
+
+    <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url "userhome" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {{form}}
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+    </body>
+</div>
+{% endblock %}
+
+
+
