@@ -11,6 +11,13 @@ this will read every line of the file and install whatever is written.
 
 5. run ‘python manage.py runserver’ to turn on the server.
 
-6. to run the tests, ‘python manage.py test signups’
-
-7. to get the test report, ‘python manage.py test signups’ then ‘coverage report’——————————————————————————————————————————————————————————————Once the http address appears below the runserver command, you can copy it and paste it into the address bar of your browser and the site will render. The functionality is described by the youtube video at the top of the page. 
+6. to run the functionality tests, you must enter the signups folder and runeach test individually.
+list of commands to run for all functionality tests
+python login_test.py
+python register_test.py
+python logout_test.py
+python navigation_test.py
+python profile_test.py
+python upload_test.py——————————————————————————————————————————————————————————————Once the http address appears below the runserver command, you can copy
+it and paste it into the address bar of your browser and the site will render.
+The functionality is described by the youtube video at the top of the page. 
